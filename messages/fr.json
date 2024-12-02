@@ -1,0 +1,113 @@
+{
+  "header": {
+    "home": "accueil",
+    "projects": "projets",
+    "about": "à propos",
+    "contact": "contactez-moi"
+  },
+  "footer": {
+    "title": "Développeur Web FullStack basé à Sceaux (92) près de Paris, France.",
+    "projects": "projets",
+    "about": "à propos",
+    "contact": "contactez-moi"
+  },
+  "home-page": {
+    "cinephoria_description": "Application web de réservation de places de cinéma.",
+    "alpha-sante_description": "Boutique en ligne de compléments alimentaires.",
+    "jimagine-hier_description": "Boutique en ligne de produits naturels fabriqués en France.",
+    "jeremy-dan_description": "Site web de photographe de mariage.",
+    "available_button": "Je suis disponible !",
+    "hero_title": "Je développe des applications web fullstack",
+    "cv_button": "télécharger mon CV",
+    "projects_title": "Projets",
+    "technologies_title": "Technologies & outils",
+    "reveal-words": {
+      "modern": "modernes",
+      "secure": "sécurisées",
+      "powerful": "performantes",
+      "responsive": "adaptatives",
+      "scalable": "scalables"
+    }
+  },
+  "contact-modal": {
+    "title": "Contactez-moi",
+    "description": "Mon profil vous intéresse ? Au plaisir d'échanger avec vous 🙂 !",
+    "lastname": "Votre nom",
+    "firstname": "Votre prénom",
+    "company": "Votre entreprise (Optionnel)",
+    "email": "Votre email",
+    "subject": "Objet",
+    "message": "Votre message",
+    "sending": "Envoi en cours...",
+    "send": "Envoyer",
+    "success": "Votre message a bien été envoyé !",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "required": "Veuillez remplir les champs obligatoires.",
+    "link": "contactez-moi"
+  },
+  "projects-page": {
+    "title": "Projets",
+    "description": "Au fil des années, j'ai eu l'opportunité de travailler sur une variété de projets allant des sites vitrines aux plateformes e-commerce. Mon objectif a toujours été de concevoir des expériences utilisateurs fluides, performantes et adaptées aux besoins spécifiques de chaque client. Que ce soit pour mettre en avant une entreprise à travers un site vitrine ou pour développer une boutique en ligne optimisée, chaque projet reflète ma passion pour le design web et la performance technique.",
+    "subtitles": {
+      "cinephoria": "Réservation de places de cinéma",
+      "alpha-sante": "Boutique en ligne de compléments alimentaires",
+      "jimagine-hier": "Boutique en ligne de produits naturels",
+      "jeremy-dan": "Photographe de mariage"
+    }
+  },
+  "about-page": {
+    "title": "Développeur Web Fullstack",
+    "description": "Ayant fondé mon expertise dans la communication digitale et le webmarketing depuis plus de 5 ans, j'ai ressenti le besoin de relever un nouveau défi : celui du développement web. Pourquoi ? Allier ces deux domaines à l'ingéniosité du code me permet de concevoir des sites qui vont au-delà de la simple fonctionnalité tout en proposant la meilleure des expériences pour les utilisateurs. Quand je ne résous pas des bugs, je capture des moments de bonheur en tant que",
+    "wedding-photographer": "photographe de mariage",
+    "cv_button": "télécharger mon CV",
+    "available_button": "Je suis disponible !"
+  },
+  "cinephoria-page": {
+    "title": "Cinéphoria",
+    "intro": "Cinéphoria est une application web de réservation de places de cinéma. Elle permet de consulter les films à l'affiche, les séances de cinéma, les salles et les places disponibles.",
+    "disclaimer": "Disclaimer: Ce projet a été realisé dans le cadre d'un projet scolaire. La compagnie n'existe pas vraiment.",
+    "subtitle-1": "Logo et identité visuelle",
+    "description-1": "Cinéphoria est un joyau du cinéma français, une véritable icône du divertissement cinématographique. Pour ce projet, j'ai créé le logo et l'identité visuelle de Cinéphoria. Le logo est composé d'une bobine de film stylisée, symbole de l'industrie cinématographique. L'identité visuelle est simple et épurée, pour mettre en avant les films et les séances de cinéma.",
+    "subtitle-2": "L'application web",
+    "description-2": "J'ai opté pour le stack MERN (MongoDB, Express, React, Node.js) + MySQL et Prisma. Les réservations, avis et incidents sont gérés en NoSQL avec MongoDB, tandis que les utilisateurs, séances, films, cinémas, salles et sièges sont gérés en SQL avec MySQL et Prisma.",
+    "technologies": "Technologies & outils utilisés",
+    "see_project": "Visiter Cinéphoria"
+  },
+  "alpha-sante-page": {
+    "title": "Alpha Santé",
+    "intro": "Alpha Santé est une boutique en ligne née du besoin de contribuer au bien-être qui découle de la vitalité, par des moyens naturels, simples, et praticables par tous.",
+    "subtitle-1": "Logo et identité visuelle",
+    "description-1": "Pour ce projet, j'ai créé le logo et l'identité visuelle d'Alpha Santé. Le logo est composé d'une feuille de laurier stylisée, symbole de la victoire et de la sagesse. La couleur verte est associée à la nature, la santé et la croissance. L'identité visuelle est simple et épurée, pour mettre en avant les produits naturels et compléments alimentaires.",
+    "subtitle-2": "La boutique en ligne",
+    "description-2": "Le client a souhaité une boutique en ligne simple et facile à maintenir. J'ai donc développé le site avec WordPress et WooCommerce avec Elementor pour faciliter la gestion du contenu.",
+    "subtitle-3": "Photographies",
+    "description-3": "Pour mettre en avant les produits de mon client et assurer leur cohérence, j'ai réalisé les photos des produits avec mon matériel.",
+    "technologies": "Technologies & outils utilisés",
+    "see-project": "Visiter Alpha Santé"
+  },
+  "jimagine-hier-page": {
+    "title": "J'imagine Hier",
+    "intro": "Ce projet me tient tout particulièrement à coeur. En 2020, j'ai co-fondé l'entreprise J'imagine Hier. Un réél challenge et beaucoup d'apprentissage pour réaliser de A à Z l'écosystème digital de l'entreprise : charte grpahique, site web, photos, réseaux sociaux, etc. Ce projet s'est terminé en 2022.",
+    "disclaimer": "Disclaimer: L'entreprise n'existe plus. Il n'est plus possible de créer un compte ou d'acheter des produits.",
+    "subtitle-1": "Charte graphique",
+    "description-1": "Pour ce projet, j'ai créé la charte graphique de J'imagine Hier. Les couleurs choisies sont le vert et le blanc pour symboliser la nature et la pureté.",
+    "subtitle-2": "La boutique en ligne",
+    "description-2": "J'ai réalisé le site web de J'imagine Hier avec WordPress et WooCommerce. J'ai également utilisé Elementor et WP-Bakery pour faciliter la gestion du contenu.",
+    "subtitle-3": "Photographies",
+    "description-3": "J'ai réalisé toutes les photos depuis chez moi en improvisant un studio photo. Pour assurer la qualité des photos, j'ai utilisé différents boitiers FujiFilm que j'utilise encore pour les mariages.",
+    "technologies": "Technologies & outils utilisés",
+    "see-project": "Visiter J'imagine Hier"
+  },
+  "jeremydan-page": {
+    "title": "Jeremy Dan",
+    "intro": "Jeremy Dan est mon site de photographe de mariage. Il me permet de présenter mon travail, mes services et de partager des moments de bonheur avec mes clients. Je compte faire évoluer le site en proposant une galerie privée pour les mariés avec un accès sécurisé. J'utiliserai PostgreSQL pour stocker les photos et les données des mariés.",
+    "subtitle-1": "Logo et identité visuelle",
+    "description-1": "Pour ce projet, j'ai créé le logo et l'identité visuelle de Jeremy Dan. Le logo est composé d'une caricature simplifiée de mon visage. L'identité visuelle est simple et épurée, pour mettre en avant les photos de mariage.",
+    "subtitle-2": "Le site",
+    "description-2": "J'ai réalisé le site avec Next.js, TypeScript et Tailwind CSS. J'ai également utilisé Vercel pour déployer le site.",
+    "subtitle-3": "Photographies",
+    "description-3": "Bien entendu, toutes les photos présentes sur le site ont été prises par moi. Je vous laisse découvrir les clichés de mes mariés !",
+    "technologies": "Technologies & outils utilisés",
+    "see-project": "Visiter Jeremy Dan"
+  }
+}

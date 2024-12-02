@@ -1,0 +1,125 @@
+{
+  "header": {
+    "home": "home",
+    "projects": "projects",
+    "about": "about",
+    "contact": "contact me"
+  },
+  "footer": {
+    "title": "FullStack Web Developer based in Sceaux (92) near Paris, France.",
+    "projects": "projects",
+    "about": "about",
+    "contact": "contact me"
+  },
+  "home-page": {
+    "cinephoria_description": "Web application for booking cinema tickets.",
+    "alpha-sante_description": "Online store of dietary supplements.",
+    "jimagine-hier_description": "Online store of natural products made in France.",
+    "jeremy-dan_description": "Wedding photographer website.",
+    "available_button": "I'm available!",
+    "hero_title": "I develop fullstack web applications which are",
+    "cv_button": "download my CV",
+    "projects_title": "Projects",
+    "technologies_title": "Technologies & tools",
+    "reveal-words": {
+      "modern": "modern",
+      "secure": "secure",
+      "powerful": "powerful",
+      "responsive": "responsive",
+      "scalable": "scalable"
+    }
+  },
+  "contact-modal": {
+    "title": "Contact me",
+    "description": "Are you interested in my profile? Let's meet 🙂 !",
+    "lastname": "Your lastname",
+    "firstname": "Your firstname",
+    "company": "Your company (Optional)",
+    "email": "Your email",
+    "subject": "Subject",
+    "message": "Your message",
+    "sending": "Sending...",
+    "send": "Send",
+    "success": "Your message has been sent successfully!",
+    "error": "An error occurred. Please try again.",
+    "required": "Please, fill in the required fields.",
+    "link": "contact me"
+  },
+
+  "home-cards": {
+    "cinephoria": {
+      "description": "Web application for booking cinema seats."
+    },
+    "alpha-sante": {
+      "description": "Online store of natural products and dietary supplements."
+    },
+    "jimagine-hier": {
+      "description": "Online store of natural products made in France."
+    }
+  },
+  "projects-page": {
+    "title": "Projects",
+    "description": "Over the years, I have had the opportunity to work on a variety of projects, ranging from showcase websites to e-commerce platforms. My goal has always been to design seamless, high-performance user experiences tailored to the specific needs of each client. Whether it’s highlighting a business through a showcase website or developing an optimized online store, each project reflects my passion for web design and technical performance.",
+    "subtitles": {
+      "cinephoria": "Booking cinema tickets applications",
+      "alpha-sante": "Online store of dietary supplements",
+      "jimagine-hier": "Online store of natural products made in France",
+      "jeremy-dan": "Wedding photographer website"
+    }
+  },
+  "about-page": {
+    "title": "FullStack Web Developer",
+    "description": "Having built my expertise in digital communication and web marketing for over 5 years, I felt the need to take on a new challenge: web development. Why? Combining these two fields with the ingenuity of coding allows me to design websites that go beyond mere functionality while offering the best possible user experience. When I'm not fixing bugs, I capture moments of happiness as a",
+    "wedding-photographer": "wedding photographer",
+    "cv_button": "download my CV",
+    "available_button": "I'm available!"
+  },
+  "cinephoria-page": {
+    "title": "Cinéphoria",
+    "intro": "Cinéphoria is a web application for booking cinema tickets. It allows users to view currently showing films, cinema sessions, available theaters, and seats.",
+    "disclaimer": "Disclaimer: This project was realized in the context of a school project. The company does not exist really.",
+    "subtitle-1": "Logo and Visual Identity",
+    "description-1": "Cinéphoria is a gem of French cinema, a true icon of cinematic entertainment. For this project, I created the logo and visual identity of Cinéphoria. The logo consists of a stylized film reel, symbolizing the film industry. The visual identity is simple and clean, to highlight the films and cinema sessions.",
+    "subtitle-2": "The Web Application",
+    "description-2": "Having the choice of technologies, I opted for the MERN stack (MongoDB, Express, React, Node.js) + MySQL and Prisma. Reservations, reviews, and incidents are managed in NoSQL with MongoDB, while users, sessions, films, cinemas, theaters, and seats are managed in SQL with MySQL and Prisma.",
+    "technologies": "Technologies & tools used",
+    "see_project": "Visit Cinéphoria"
+  },
+  "alpha-sante-page": {
+    "title": "Alpha Santé",
+    "intro": "Alpha Santé is an online store born from the need to contribute to well-being that stems from vitality, through natural, simple, and accessible means for everyone.",
+    "subtitle-1": "Logo and Visual Identity",
+    "description-1": "For this project, I created the logo and visual identity of Alpha Santé. The logo consists of a stylized laurel leaf, symbolizing victory and wisdom. The green color is associated with nature, health, and growth. The visual identity is simple and clean, highlighting natural products and dietary supplements.",
+    "subtitle-2": "The Online Store",
+    "description-2": "The client wanted a simple and easy-to-maintain online store. I developed the site with WordPress and WooCommerce, using Elementor to simplify content management.",
+    "subtitle-3": "Photography",
+    "description-3": "To highlight my client's products and ensure consistency, I took product photos using my own equipment.",
+    "technologies": "Technologies & tools used",
+    "see-project": "Visit Alpha Santé"
+  },
+  "jimagine-hier-page": {
+    "title": "J'imagine Hier",
+    "intro": "This project is particularly close to my heart. In 2020, I co-founded the company J'imagine Hier. It was a real challenge and a lot of learning to build the company's digital ecosystem from A to Z: brand identity, website, photos, social media, etc. This project concluded in 2022.",
+    "disclaimer": "Disclaimer: The company does not exist anymore. It is not still possible to create an account or purchase products.",
+    "subtitle-1": "Brand Identity",
+    "description-1": "For this project, I created the brand identity for J'imagine Hier. The chosen colors were green and white, symbolizing nature and purity.",
+    "subtitle-2": "The Online Store",
+    "description-2": "I developed the J'imagine Hier website using WordPress and WooCommerce. I also used Elementor and WP-Bakery to simplify content management.",
+    "subtitle-3": "Photography",
+    "description-3": "I took all the photos at home by improvising a photo studio. To ensure high-quality images, I used various FujiFilm cameras, which I still use for weddings.",
+    "technologies": "Technologies & tools used",
+    "see-project": "Visit J'imagine Hier"
+  },
+  "jeremydan-page": {
+    "title": "Jeremy Dan",
+    "intro": "Jeremy Dan is my wedding photographer. It allows me to present my work, my services, and to share happy moments with my clients. I aim to evolve the site by offering a private gallery for married couples with a secure access. I will use PostgreSQL to store photos and wedding data.",
+    "subtitle-1": "Logo and Visual Identity",
+    "description-1": "For this project, I created the logo and visual identity of Jeremy Dan. The logo is a simplified caricature of my face. The visual identity is simple and clean, highlighting wedding photos.",
+    "subtitle-2": "The Website",
+    "description-2": "I developed the site with Next.js, TypeScript, and Tailwind CSS. I also used Vercel to deploy the site.",
+    "subtitle-3": "Photography",
+    "description-3": "Of course, all the photos on the site have been taken by me. Have a look at my wedding clichés!",
+    "technologies": "Technologies & tools used",
+    "see-project": "Visit Jeremy Dan"
+  }
+}
