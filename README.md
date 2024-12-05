@@ -1,7 +1,8 @@
 # Jeremy L'homme - Portfolio
 
 A modern, responsive portfolio website built with Next.js 14, featuring
-internationalization and a contact form with SendGrid integration.
+internationalization, Google reCAPTCHA and a contact form with SendGrid
+integration.
 
 ## 🚀 Features
 
@@ -45,11 +46,14 @@ git clone https://github.com/jeremylhomme/nexjs-portfolio.git
 pnpm install
 ```
 
-3. Rename `.env.example` to `.env` and set your SendGrid API key and template ID:
+3. Rename `.env.example` to `.env` and set your SendGrid API key, template ID,
+   and reCAPTCHA keys:
 
 ```env
 SENDGRID_API_KEY=your_sendgrid_api_key
 SENDGRID_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_CAPTCHA_SITE_KEY=your_captcha_site_key
+CAPTCHA_SECRET_KEY=your_captcha_secret_key
 ```
 
 4. Run the development server:
