@@ -1,9 +1,7 @@
-'use client'
+'use client';
 
-import React, { useState } from 'react'
-import { toast, ToastContainer } from 'react-toastify'
-import { Slide } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 import {
   Sheet,
   SheetContent,
@@ -11,108 +9,114 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger
-} from '@/src/components/ui/sheet'
-import { Button } from '@/src/components/ui/button'
-import { Input } from '@/src/components/ui/input'
-import { Textarea } from '@/src/components/ui/textarea'
-import { useTranslations } from 'next-intl'
+} from '@/src/components/ui/sheet';
+import { Button } from '@/src/components/ui/button';
+import { Input } from '@/src/components/ui/input';
+import { Textarea } from '@/src/components/ui/textarea';
+import { useTranslations } from 'next-intl';
+
+interface FormData {
+  firstName: string;
+  lastName: string;
+  company: string;
+  email: string;
+  subject: string;
+  message: string;
+  formType: string;
+}
+
+const initialFormData: FormData = {
+  firstName: '',
+  lastName: '',
+  company: '',
+  email: '',
+  subject: '',
+  message: '',
+  formType: 'contact'
+};
 
 const ContactModal = ({
   children,
   className
 }: {
-  children?: React.ReactNode
-  className?: string
+  children?: React.ReactNode;
+  className?: string;
 }) => {
-  const t = useTranslations('contact-modal')
-
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    company: '',
-    email: '',
-    subject: '',
-    message: '',
-    formType: 'contact'
-  })
-  const [loading, setLoading] = useState(false)
+  const t = useTranslations('contact-modal');
+  const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
 
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
+  const generateRecaptchaToken = async () => {
+    if (!(window as any).grecaptcha) {
+      throw new Error('reCAPTCHA not loaded');
+    }
+
+    return await new Promise<string>((resolve, reject) => {
+      (window as any).grecaptcha.ready(() => {
+        (window as any).grecaptcha
+          .execute(process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY, {
+            action: 'submit'
+          })
+          .then(resolve)
+          .catch(reject);
+      });
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    if (
-      !formData.firstName ||
-      !formData.lastName ||
-      !formData.email ||
-      !formData.subject ||
-      !formData.message
-    ) {
-      toast.error(`${t('required')}`)
-      return
+    const requiredFields: Array<keyof FormData> = [
+      'firstName',
+      'lastName',
+      'email',
+      'subject',
+      'message'
+    ];
+    const missingFields = requiredFields.filter(field => !formData[field]);
+
+    if (missingFields.length > 0) {
+      toast.error(t('required'));
+      return;
     }
 
-    setLoading(true)
+    const loadingToast = toast.loading(t('sending'));
+    setLoading(true);
 
     try {
-      const response = await fetch('/api/emails/send-email', {
+      const recaptchaToken = await generateRecaptchaToken();
+      const response = await fetch('/api/send-email', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, recaptchaToken })
+      });
 
       if (response.ok) {
-        toast.success(`${t('success')}`)
-        setFormData({
-          firstName: '',
-          lastName: '',
-          company: '',
-          email: '',
-          subject: '',
-          message: '',
-          formType: 'contact'
-        })
+        toast.success(t('success'));
+        setFormData(initialFormData);
       } else {
-        const errorData = await response.json()
-        toast.error(`${t('error')}`)
+        const errorData = await response.json();
+        toast.error(t('error'));
+        console.error('API Error:', errorData);
       }
     } catch (error) {
-      console.error('Network Error:', error)
-      toast.error('Failed to connect to the server.')
+      console.error('Form submission error:', error);
+      toast.error(t('error'));
     } finally {
-      setLoading(false)
+      toast.dismiss(loadingToast);
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <>
-      <ToastContainer
-        position='top-right'
-        autoClose={3000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme='light'
-        transition={Slide}
-        closeButton
-      />
-
       <Sheet>
         {children ? (
           <SheetTrigger asChild>{children}</SheetTrigger>
@@ -177,7 +181,7 @@ const ContactModal = ({
         </SheetContent>
       </Sheet>
     </>
-  )
-}
+  );
+};
 
-export default ContactModal
+export default ContactModal;

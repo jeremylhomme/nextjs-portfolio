@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl'
 interface Card {
   title: string
   subtitle: string
-  description: string
   image: string
   href: string
 }
@@ -17,28 +16,24 @@ export default function Projets() {
     {
       title: 'Cinéphoria',
       subtitle: t('subtitles.cinephoria'),
-      description: t('projects.cinephoria.description'),
       image: '/cinephoria.webp',
       href: '/projects/cinephoria'
     },
     {
       title: 'Alpha Santé',
       subtitle: t('subtitles.alpha-sante'),
-      description: t('projects.alpha-sante.description'),
       image: '/alpha-sante.webp',
       href: '/projects/alpha-sante'
     },
     {
       title: `J'imagine Hier`,
       subtitle: t('subtitles.jimagine-hier'),
-      description: t('projects.jimagine-hier.description'),
       image: '/jimagine-hier.webp',
       href: '/projects/jimagine-hier'
     },
     {
       title: `Jeremy Dan`,
       subtitle: t('subtitles.jeremy-dan'),
-      description: t('projects.jeremydan.description'),
       image: '/jeremydan.webp',
       href: '/projects/jeremydan'
     }

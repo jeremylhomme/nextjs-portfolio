@@ -98,7 +98,7 @@ const Header = () => {
                   </li>
                 )
               )}
-              <li>
+              <li className='pt-2'>
                 <LanguageSwitcher pathname={pathname} />
               </li>
             </ul>

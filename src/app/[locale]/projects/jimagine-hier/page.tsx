@@ -8,11 +8,11 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 const JimagineHierPage = () => {
-  const t = useTranslations()
+  const t = useTranslations('jimagine-hier-page')
   const projectContent = [
     {
-      title: t('jimagine-hier-page.subtitle-1'),
-      description: t('jimagine-hier-page.description-1'),
+      title: t('subtitle-1'),
+      description: t('description-1'),
       content: (
         <Image
           src='/jimagine-hier-logo.webp'
@@ -25,8 +25,8 @@ const JimagineHierPage = () => {
       alt: "Logo J'imagine Hier"
     },
     {
-      title: t('jimagine-hier-page.subtitle-2'),
-      description: t('jimagine-hier-page.description-2'),
+      title: t('subtitle-2'),
+      description: t('description-2'),
       content: (
         <Image
           src='/jimagine-hier-home.webp'
@@ -39,8 +39,8 @@ const JimagineHierPage = () => {
       alt: "Page d'accueil J'imagine Hier"
     },
     {
-      title: t('jimagine-hier-page.subtitle-3'),
-      description: t('jimagine-hier-page.description-3'),
+      title: t('subtitle-3'),
+      description: t('description-3'),
       content: (
         <Image
           src='/jimagine-hier-ex-photo.webp'
@@ -71,11 +71,11 @@ const JimagineHierPage = () => {
     <section>
       <div className='container max-w-4xl justify-center border-b py-20'>
         <h1 className='mb-4 text-2xl font-semibold'>
-          {t('jimagine-hier-page.title')}
+          {t('title')}
         </h1>
         <div className='space-y-6 text-muted-foreground'>
-          <p>{t('jimagine-hier-page.intro')}</p>
-          <p className='italic'>{t('jimagine-hier-page.disclaimer')}</p>
+          <p>{t('intro')}</p>
+          <p className='italic'>{t('disclaimer')}</p>
         </div>
       </div>
 
@@ -88,10 +88,10 @@ const JimagineHierPage = () => {
               size='custom'
               className='w-fit'
               onClick={() =>
-                window.open('https://jimagine-hier.com/', '_blank')
+                window.open('https://jimagine-hier.me/', '_blank')
               }
             >
-              {t('jimagine-hier-page.see-project')}
+              {t('see-project')}
             </Button>
           </div>
         </div>
@@ -99,7 +99,7 @@ const JimagineHierPage = () => {
       <div className='container flex justify-center'>
         <div className='w-full max-w-4xl'>
           <h2 className='mb-4 mt-16 text-2xl font-semibold'>
-            {t('jimagine-hier-page.technologies')}
+            {t('technologies')}
           </h2>
           <IconsCard items={technologies} />
         </div>
