@@ -1,12 +1,14 @@
-'use client'
+'use client';
 
-import { Button } from '@/src/components/ui/button'
-import { IconsCard } from '@/src/components/ui/card-icons'
-import RevealWords from '@/src/components/ui/reveal-words'
-import { MinimalCard } from '@/src/components/ui/minimal-card'
+import { Button } from '@/src/components/ui/button';
+import { IconsCard } from '@/src/components/ui/card-icons';
+import RevealWords from '@/src/components/ui/reveal-words';
+import { MinimalCard } from '@/src/components/ui/minimal-card';
+import { Link } from '@/src/navigation';
+import { useParams } from 'next/navigation';
 
-import AvailableBadge from '@/src/components/ui/available-badge'
-import { useTranslations } from 'next-intl'
+import AvailableBadge from '@/src/components/ui/available-badge';
+import { useTranslations } from 'next-intl';
 
 const items = [
   { image: '/react.svg', alt: 'React', link: 'https://fr.react.dev/' },
@@ -58,17 +60,22 @@ const items = [
     alt: 'Prisma',
     link: 'https://www.prisma.io/'
   }
-]
+];
 
 export default function Home() {
-  const t = useTranslations('home-page')
+  const t = useTranslations('home-page');
+  const params = useParams();
+  const cvFileName =
+    params?.locale === 'fr'
+      ? 'CV_LHOMME_JEREMY_2024_FR.pdf'
+      : 'CV_LHOMME_JEREMY_2024_EN.pdf';
   const revealWords = [
     t('reveal-words.modern'),
     t('reveal-words.secure'),
     t('reveal-words.powerful'),
     t('reveal-words.responsive'),
     t('reveal-words.scalable')
-  ]
+  ];
   const cards = [
     {
       title: 'Cinéphoria',
@@ -98,11 +105,11 @@ export default function Home() {
       badges: ['Next.js', 'TypeScript'],
       link: '/projects/jeremydan'
     }
-  ]
+  ];
   return (
     <section className=''>
       <div className='container mx-auto max-w-4xl border-b py-16'>
-        <h1 className='mb-4 text-center text-6xl leading-tight text-muted-foreground md:text-left'>
+        <h1 className='mb-4 text-center text-5xl leading-tight text-muted-foreground md:text-left md:text-6xl'>
           {t('hero_title')}{' '}
           <RevealWords
             words={revealWords}
@@ -110,7 +117,12 @@ export default function Home() {
           />
         </h1>
         <div className='mt-8 flex flex-col items-center md:flex-row md:items-center'>
-          <a href='/cv-jeremy-lhomme.pdf' download>
+          <Link
+            href={cvFileName}
+            download
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <Button
               variant='custom'
               size='custom'
@@ -118,7 +130,7 @@ export default function Home() {
             >
               {t('cv_button')}
             </Button>
-          </a>
+          </Link>
           <AvailableBadge text={t('available_button')} />
         </div>
       </div>
@@ -154,5 +166,5 @@ export default function Home() {
         </div>
       </div>
     </section>
-  )
+  );
 }
